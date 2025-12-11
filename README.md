@@ -1,58 +1,63 @@
 Network Scanner Tool
 
-A Python-based network scanning tool that performs:
+A lightweight and practical Python network scanning tool designed for penetration testing, cybersecurity learning, and home lab analysis.
 
-Ping Sweep — detect active hosts on a network
+The tool performs:
 
-Port Scan — discover open ports and running services
+Ping Sweeps → Discover active hosts
 
-Uses Nmap for accurate scanning
+Port Scans → Detect open ports & services
 
-Uses Rich for clean, styled CLI output
+Styled CLI Output → Clean tables using rich
+
+Nmap Integration → Accurate network results
 
 Features
-1. Ping Sweep
+🔍 1. Ping Sweep
 
-Detect all live hosts in a given subnet.
-Example input:
+Scan an entire subnet to identify devices online.
+
+Example:
 
 192.168.1.0/24
 
-2. Port Scanning
+🔎 2. Port Scan
 
-Scan the first 1024 ports of any target IP and list:
+Scan the first 1024 ports of a target to reveal:
 
 Open ports
 
-Service names
+Services
 
-Port states (open, filtered, closed)
+State (open / filtered / closed)
 
-3. Styled Output
+🎨 3. Styled Output
 
-Uses rich to print clean tables and colored text.
+Powered by the rich library:
+
+Color-coded info
+
+Professional tables
+
+Easy to read for reports
 
 Requirements
-1. Python
+✔ Python
 
-Version 3.9 or newer recommended.
-Check version with:
+Python 3.9 or higher
 
 python --version
 
-2. Nmap
+✔ Nmap
 
-Download and install from:
+Download:
 https://nmap.org/download.html
 
-Ensure it is added to your PATH:
+Verify Nmap:
 
 nmap --version
 
-3. Python Packages
-
-Install dependencies with:
-
+✔ Python Libraries
 pip install python-nmap rich
 
 Project Structure
@@ -61,17 +66,14 @@ network-scanner/
 │── README.md
 │── requirements.txt
 │── assets/
-│     └── logo.png (optional)
-│── reports/        (future use)
+│     └── logo.png      ← your custom logo here
+│── reports/            ← future reporting system
 
 How to Run
-
-Run the script with:
-
 python scanner.py
 
 
-You will see:
+Menu shown:
 
 Network Scanner Tool
 1. Ping Sweep
@@ -79,13 +81,13 @@ Network Scanner Tool
 Choose an option (1-2):
 
 Example Output
-Ping Sweep Example
+Ping Sweep
 Performing ping sweep on 192.168.43.0/24...
 Live hosts found: 2
 ✔ 192.168.43.1
 ✔ 192.168.43.62
 
-Port Scan Example
+Port Scan
 Open Ports on 192.168.43.62
 ┏━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━┓
 ┃ Port ┃ State    ┃ Service      ┃
@@ -96,21 +98,17 @@ Open Ports on 192.168.43.62
 └──────┴──────────┴──────────────┘
 
 requirements.txt
-
-Create a file named requirements.txt with:
-
 python-nmap
 rich
 
-Future Enhancements (Optional)
+Future Enhancements
 
-Save scan results to HTML or JSON
-
-Add multi-threading for speed
-
-Add OS detection
-
-Add vulnerability checks
+🔹 Save results to JSON / HTML
+🔹 Add OS detection
+🔹 Add vulnerability checks
+🔹 Add threaded scanning
+🔹 Build a GUI version
+🔹 Build a web dashboard version
 
 Author
 
