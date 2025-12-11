@@ -12,7 +12,9 @@ Styled CLI Output → Clean tables using rich
 
 Nmap Integration → Accurate network results
 
+
 Features
+
 🔍 1. Ping Sweep
 
 Scan an entire subnet to identify devices online.
